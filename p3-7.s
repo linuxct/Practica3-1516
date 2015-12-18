@@ -29,7 +29,7 @@ __start:
 	add $t3,$t3,$t5			#sumamos el valor de la multiplicacion de k por 20 a la dir. base. 
 	jr $t3					#saltamos a la direccion deseada
 	
-L0:	la	$a0,str_1			#L0: muestra por pantalla la eleccion de caso y hace la multiplicacion de L6 y L7
+L0:	la	$a0,str_1			#L0: muestra por pantalla la eleccion de caso y hace la suma de L6 y L7
 	jal put_str				#JAL, salta a Escribir Cadena
 	add	$t8,$t6,$t7			#Suma t6 y t7 y guarda el resultado en t8
 	j	Fin					#J, salta a Fin
@@ -37,11 +37,11 @@ L1:	la	$a0,str_2			#L1: muestra por pantalla la eleccion de caso y hace la resta
 	jal put_str				#JAL, salta a Escribir Cadena
 	sub	$t8,$t6,$t7			#Resta t6 y t7 y lo guarda en t8
 	j	Fin					#J, salta a Fin
-L2:	la	$a0,str_3			#L2: muestra por pantalla la eleccion de caso y hace el OR de L6 y L7
+L2:	la	$a0,str_3			#L2: muestra por pantalla la eleccion de caso y hace la multiplicacion de L6 y L7
 	jal put_str				#JAL, salta a Escribir Cadena
 	mul	$t8,$t6,$t7			#Hace el or logico de t6 y t7 y lo guarda en t8
 	j	Fin					#J, salta a Fin
-L3:	la	$a0,str_4			#L3: muestra por pantalla la eleccion de caso y hace el and de L6 y L7
+L3:	la	$a0,str_4			#L3: muestra por pantalla la eleccion de caso y hace el AND & de L6 y L7
 	jal put_str				#JAL, salta a Escribir Cadena
 	and	$t8,$t6,$t7			#Hace el and logico de t6 y t7 y lo guarda en t8
 	j	Fin					#J, salta a Fin

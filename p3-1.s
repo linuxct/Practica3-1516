@@ -15,14 +15,14 @@ dat_f:    .float     0.032, 0.101e3, -2.3e-4
 	.text
 	.globl __start
 __start:
-	la	$a0,str_4	#Escribe en consola el entero "10" (tipo word).
+	la	$a0,str_4	#Escribe en consola el entero "3002" (tipo word).
 	jal	put_str
 	lw	$a0,dat_w+8
 	jal	put_int
 	la	$a0,enter
 	jal	put_str
 
-	la	$a0,str_4	#Escribe en consola el entero "-40" (tipo byte).
+	la	$a0,str_4	#Escribe en consola el entero "2" (tipo byte).
 	jal	put_str
 	li	$t0,1
 	lb	$a0,dat_b($t0)
@@ -30,7 +30,7 @@ __start:
 	la	$a0,enter
 	jal	put_str
 
-	la	$a0,str_5	#Escribe en consola el flotante "0.101e-3" (tipo float).
+	la	$a0,str_5	#Escribe en consola el flotante "-2.3e-4" (tipo float).
 	jal	put_str	
 	li	$t0,6
 	l.s	$f12,dat_f+2($t0)
