@@ -42,31 +42,31 @@ __start:
 
 ############# SUBRUTINAS DE CONSOLA ##################
 put_int:
-	li	$v0,1		#Escribe un entero en la consola.
+	li	$v0,1	#Escribe un entero en la consola.
 	syscall
 	jr	$31
 #_______________________________________________________
 put_sfloat:
-	li	$v0,2		#Escribe un flotante simple en la consola.
+	li	$v0,2	#Escribe un flotante simple en la consola.
 	syscall
 	jr	$31
 #_______________________________________________________
 put_str:
-	li	$v0,4		#Escribe una cadena de texto en la consola.
+	li	$v0,4	#Escribe una cadena de texto en la consola.
 	syscall
 	jr	$31
 #_______________________________________________________
-get_int:			 #Lee un entero de la consola.
+get_int:		#Lee un entero de la consola.
 	li	$v0,5
 	syscall
 	jr	$31
 #_______________________________________________________
-get_sfloat:			#Lee un flotante simple de la consola.
+get_sfloat:		#Lee un flotante simple de la consola.
 	li	$v0,6
 	syscall
 	jr	$31
 
 #_______________________________________________________
 fin:	
-	li	$v0,10		#Cierra consola y finaliza programa.
+	li	$v0,10	#Cierra consola y finaliza programa.
 	syscall
